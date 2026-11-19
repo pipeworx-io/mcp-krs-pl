@@ -1,0 +1,26 @@
+[
+  {
+    "name": "krs_company_get",
+    "description": "Polish company or organisation by KRS number (National Court Register, Krajowy Rejestr Sadowy). e.g. {krs:\"0000019193\"} (PKP S.A.). Returns {found, company:{krs, register, legal_name, legal_form, regon, nip, registration_date, registered_address, website, share_capital, main_activity, status, status_basis, procedures}, data_as_of, source}. Lookup is by KRS number only (the register has no name search); found:false with reason when the number is not registered. No officers or personal data are returned.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "krs": {
+          "type": "string",
+          "description": "KRS number, 1-10 digits, e.g. \"0000019193\" or \"19193\"."
+        },
+        "register": {
+          "type": "string",
+          "enum": [
+            "P",
+            "S"
+          ],
+          "description": "Optional: P = entrepreneurs, S = associations/foundations/public bodies. Default: tries P then S."
+        }
+      },
+      "required": [
+        "krs"
+      ]
+    }
+  }
+]

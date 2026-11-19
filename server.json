@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/krs-pl",
+  "title": "Krs Pl",
+  "description": "Polish National Court Register (KRS), published by the Ministry of Justice. Keyless. Live call per…",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/krs-pl",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-krs-pl",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/krs-pl/mcp"
+    }
+  ]
+}
